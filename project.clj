@@ -16,8 +16,8 @@
 
   :global-vars {*warn-on-reflection* true}
 
-  :dependencies [[org.apache.avro/avro "1.10.1"]
-                 [cheshire/cheshire "5.9.0"]]
+  :dependencies [[org.apache.avro/avro "1.10.2"]
+                 [cheshire/cheshire "5.10.1"]]
 
   :codox {:include [abracad.avro abracad.avro.edn]}
 
@@ -49,10 +49,10 @@
                             [org.xerial.snappy/snappy-java "1.1.7.3"]
                             [nubank/matcher-combinators "1.2.1"]]}
              :clojure-1-10 {:dependencies
-                           [[org.clojure/clojure "1.10.1"]
-                            [midje "1.9.9" :exclusions [org.clojure/clojure]]
-                            [org.xerial.snappy/snappy-java "1.1.7.3"]
-                            [nubank/matcher-combinators "1.2.1"]]}}
+                            [[org.clojure/clojure "1.10.3"]
+                             [midje "1.9.9" :exclusions [org.clojure/clojure]]
+                             [org.xerial.snappy/snappy-java "1.1.7.3"]
+                             [nubank/matcher-combinators "1.2.1"]]}}
 
   :source-paths ["src/clojure"]
   :java-source-paths ["src/java"]
