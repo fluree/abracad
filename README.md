@@ -1,7 +1,5 @@
 # abracad
 
-[![Build Status](https://travis-ci.org/nubank/abracad.svg?branch=master)](https://travis-ci.org/nubank/abracad)
-
 Abracad is a Clojure library for de/serializing Clojure data
 structures with Avro, leveraging the Java Avro implementation.
 
@@ -17,7 +15,7 @@ Abracad is available on Clojars.  Add this `:dependency` to your
 Leiningen `project.clj`:
 
 ```clj
-[nubank/abracad "0.4.15"]
+[com.fluree/abracad "0.4.18"]
 ```
 
 ## Usage
