@@ -1,6 +1,6 @@
-(defproject nubank/abracad "0.4.18"
+(defproject com.fluree/abracad "0.4.18-SNAPSHOT"
   :description "De/serialize Clojure data structures with Avro."
-  :url "http://github.com/nubank/abracad"
+  :url "https://github.com/fluree/abracad"
   :licenses [{:name "Eclipse Public License"
               :url  "http://www.eclipse.org/legal/epl-v10.html"}
              {:name "Apache License, Version 2.0"
