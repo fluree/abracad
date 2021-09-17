@@ -33,7 +33,8 @@ record serialization."
 
 (defn element-union?
   [^Schema schema]
-  (= (.getType schema) Schema$Type/UNION))
+  (let [^Schema schema (-> schema .getTypes first)]
+    (= edn-meta (.getFullName schema))))
 
 (defn edn-schema?
   [^Schema schema]
