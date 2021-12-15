@@ -6,9 +6,9 @@
              {:name "Apache License, Version 2.0"
               :url  "http://www.apache.org/licenses/LICENSE-2.0.html"}]
 
-  :plugins [[codox/codox "0.10.7"]
-            [lein-midje "3.2.1"]
-            [lein-cloverage "1.1.2"]
+  :plugins [[codox/codox "0.10.8"]
+            [lein-midje "3.2.2"]
+            [lein-cloverage "1.2.2"]
             [lein-vanity "0.2.0"]]
 
   :repositories [["central" {:url "https://repo1.maven.org/maven2/" :snapshots false}]
@@ -16,43 +16,23 @@
 
   :global-vars {*warn-on-reflection* true}
 
-  :dependencies [[org.apache.avro/avro "1.10.2"]
+  :dependencies [[org.apache.avro/avro "1.11.0"]
                  [cheshire/cheshire "5.10.1"]]
 
   :codox {:include [abracad.avro abracad.avro.edn]}
 
-  :aliases {"test-all" ["with-profile" ~(str "clojure-1-7:"
-                                             "clojure-1-8:"
-                                             "clojure-1-9:"
-                                             "clojure-1-10")
-                        "midje"]
-            "coverage" ["cloverage" "-s" "coverage"]
+  :aliases {"coverage" ["cloverage" "-s" "coverage"]
             "loc"      ["vanity"]}
 
-  :profiles {:dev         {:dependencies
-                           [[midje "1.9.9" :exclusions [org.clojure/clojure]]
-                            [org.xerial.snappy/snappy-java "1.1.7.3"]
-                            [nubank/matcher-combinators "1.2.1"]]}
-             :clojure-1-7 {:dependencies
-                           [[org.clojure/clojure "1.7.0"]
-                            [midje "1.9.9" :exclusions [org.clojure/clojure]]
-                            [org.xerial.snappy/snappy-java "1.1.7.3"]
-                            [nubank/matcher-combinators "0.2.1"]]}
-             :clojure-1-8 {:dependencies
-                           [[org.clojure/clojure "1.8.0"]
-                            [midje "1.9.9" :exclusions [org.clojure/clojure]]
-                            [org.xerial.snappy/snappy-java "1.1.7.3"]
-                            [nubank/matcher-combinators "0.2.1"]]}
-             :clojure-1-9 {:dependencies
-                           [[org.clojure/clojure "1.9.0"]
-                            [midje "1.9.9" :exclusions [org.clojure/clojure]]
-                            [org.xerial.snappy/snappy-java "1.1.7.3"]
-                            [nubank/matcher-combinators "1.2.1"]]}
-             :clojure-1-10 {:dependencies
-                            [[org.clojure/clojure "1.10.3"]
-                             [midje "1.9.9" :exclusions [org.clojure/clojure]]
-                             [org.xerial.snappy/snappy-java "1.1.7.3"]
-                             [nubank/matcher-combinators "1.2.1"]]}}
+  :profiles {:dev  {:dependencies
+                    [[midje "1.10.5" :exclusions [org.clojure/clojure]]
+                     [org.xerial.snappy/snappy-java "1.1.8.4"]
+                     [nubank/matcher-combinators "1.5.1"]]}
+             :test {:dependencies
+                    [[org.clojure/clojure "1.10.3"]
+                     [midje "1.10.5" :exclusions [org.clojure/clojure]]
+                     [org.xerial.snappy/snappy-java "1.1.8.4"]
+                     [nubank/matcher-combinators "1.5.1"]]}}
 
   :source-paths ["src/clojure"]
   :java-source-paths ["src/java"]

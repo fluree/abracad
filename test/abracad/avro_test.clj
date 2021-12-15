@@ -8,8 +8,7 @@
   (:import [clojure.lang ExceptionInfo]
            [java.io FileInputStream]
            [java.net InetAddress]
-           [org.apache.avro.file DataFileStream]
-           [org.apache.avro SchemaParseException]))
+           [org.apache.avro.file DataFileStream]))
 
 (defn roundtrip-binary [schema & records]
   (->> (apply avro/binary-encoded schema records)
@@ -23,8 +22,8 @@
 (defn roundtrips?
   ([schema input] (roundtrips? schema input input))
   ([schema expected input]
-     (and (= expected (apply roundtrip-binary schema input))
-          (= expected (apply roundtrip-json schema input)))))
+   (and (= expected (apply roundtrip-binary schema input))
+        (= expected (apply roundtrip-json schema input)))))
 
 (defn roundtrips [schema input]
   [(apply roundtrip-binary schema input)
