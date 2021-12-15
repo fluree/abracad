@@ -4,7 +4,7 @@
   <groupId>com.fluree</groupId>
   <artifactId>abracad</artifactId>
   <packaging>jar</packaging>
-  <version>0.4.18-SNAPSHOT</version>
+  <version>0.4.19</version>
   <name>abracad</name>
   <description>De/serialize Clojure data structures with Avro.</description>
   <url>https://github.com/fluree/abracad</url>
@@ -19,10 +19,10 @@
     </license>
   </licenses>
   <scm>
-    <url>https://github.com/damballa/abracad</url>
-    <connection>scm:git:git://github.com/damballa/abracad.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/damballa/abracad.git</developerConnection>
-    <tag>53230ed8b8fa63edc4c835244fabf209cb4ad81a</tag>
+    <url>https://github.com/fluree/abracad</url>
+    <connection>scm:git:git://github.com/fluree/abracad.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/fluree/abracad.git</developerConnection>
+    <tag>5809987ad25a8c4b0abe928fd0026e6455f2093e</tag>
   </scm>
   <build>
     <sourceDirectory>src/clojure</sourceDirectory>
@@ -90,7 +90,7 @@
     <dependency>
       <groupId>org.apache.avro</groupId>
       <artifactId>avro</artifactId>
-      <version>1.10.2</version>
+      <version>1.11.0</version>
     </dependency>
     <dependency>
       <groupId>cheshire</groupId>
@@ -100,7 +100,7 @@
     <dependency>
       <groupId>midje</groupId>
       <artifactId>midje</artifactId>
-      <version>1.9.9</version>
+      <version>1.10.5</version>
       <exclusions>
         <exclusion>
           <artifactId>clojure</artifactId>
@@ -112,13 +112,19 @@
     <dependency>
       <groupId>org.xerial.snappy</groupId>
       <artifactId>snappy-java</artifactId>
-      <version>1.1.7.3</version>
+      <version>1.1.8.4</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>nubank</groupId>
       <artifactId>matcher-combinators</artifactId>
-      <version>1.2.1</version>
+      <version>1.5.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.clojure</groupId>
+      <artifactId>clojure</artifactId>
+      <version>1.10.3</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

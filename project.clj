@@ -1,4 +1,4 @@
-(defproject com.fluree/abracad "0.4.18"
+(defproject com.fluree/abracad "0.4.19"
   :description "De/serialize Clojure data structures with Avro."
   :url "https://github.com/fluree/abracad"
   :licenses [{:name "Eclipse Public License"
