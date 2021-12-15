@@ -22,7 +22,7 @@
     <url>https://github.com/fluree/abracad</url>
     <connection>scm:git:git://github.com/fluree/abracad.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/fluree/abracad.git</developerConnection>
-    <tag>5809987ad25a8c4b0abe928fd0026e6455f2093e</tag>
+    <tag>0b9da8afcdc3d4181b78d49ac733cc6baa1c6871</tag>
   </scm>
   <build>
     <sourceDirectory>src/clojure</sourceDirectory>
@@ -88,6 +88,12 @@
   </dependencyManagement>
   <dependencies>
     <dependency>
+      <groupId>org.clojure</groupId>
+      <artifactId>clojure</artifactId>
+      <version>1.10.3</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>org.apache.avro</groupId>
       <artifactId>avro</artifactId>
       <version>1.11.0</version>
@@ -119,12 +125,6 @@
       <groupId>nubank</groupId>
       <artifactId>matcher-combinators</artifactId>
       <version>1.5.1</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.clojure</groupId>
-      <artifactId>clojure</artifactId>
-      <version>1.10.3</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
